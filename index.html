@@ -151,7 +151,7 @@ Dessert</h3>
                 
 <html lang="fr">
 <head>
-    <content="width=device-width, initial-scale=1.0">
+  <content="width=device-width, initial-scale=1.0">
     <title>L'Atlas Culinaire</title>
     <style>
         * {
@@ -160,11 +160,22 @@ Dessert</h3>
             box-sizing: border-box;
         }
 
-        body {
+       body {
             font-family: 'Georgia', serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             color: #f5f5f5;
             line-height: 1.6;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
                  
               .continent-title {
