@@ -146,8 +146,10 @@ Dessert</h3>
 </body>
 </html>
 
+ <!DOCTYPE html>
+<html lang="fr">
 <head>
-  <content="width=device-width, initial-scale=1.0">
+    <content="width=device-width, initial-scale=1.0">
     <title>L'Atlas Culinaire</title>
     <style>
         * {
@@ -156,7 +158,7 @@ Dessert</h3>
             box-sizing: border-box;
         }
 
-       body {
+        body {
             font-family: 'Georgia', serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             color: #f5f5f5;
@@ -173,17 +175,33 @@ Dessert</h3>
             top: 0;
             z-index: 100;
         }
-                 
-              .continent-title {
-            font-size: 2.5rem;
+
+ h1 {
+            font-size: 3rem;
             color: #d4af37;
-            margin-bottom: 2rem;
-            text-align: center;
-            border-bottom: 3px solid rgba(212, 175, 55, 0.3);
-            padding-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
         }
 
- .continent-btn {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            color: #c9a961;
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .continent-btn {
             padding: 0.8rem 2rem;
             background: linear-gradient(135deg, #d4af37 0%, #c9a961 100%);
             border: none;
@@ -194,17 +212,76 @@ Dessert</h3>
             transition: all 0.3s ease;
             font-size: 1rem;
             text-transform: uppercase;
-            letter-spacing: 1px
-            padding: 0.6rem 1.5rem;
-            font-size: 0.9rem;
-            } 
+            letter-spacing: 1px;
+        }
 
-         nav {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            padding: 1.5rem;
-            flex-wrap: wrap;
+        .continent-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+            background: linear-gradient(135deg, #e5c158 0%, #d4af37 100%);
+        }
+
+        .continent-btn.active {
+            background: linear-gradient(135deg, #8b6914 0%, #d4af37 100%);
+            color: #fff;
+            box-shadow: 0 6px 15px rgba(212, 175, 55, 0.5);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .continent-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .continent-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .continent-title {
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 2rem;
+            text-align: center;
+            border-bottom: 3px solid rgba(212, 175, 55, 0.3);
+            padding-bottom: 1rem;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .category-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.5);
         }
 
         .category-title {
@@ -218,5 +295,47 @@ Dessert</h3>
 
         .category-icon {
             font-size: 2rem;
-        }      
+        }
+
+
+        .item-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            color: #e0e0e0;
+            transition: all 0.2s ease;
+        }
+
+        .item-list li:hover {
+            color: #d4af37;
+            padding-left: 10px;
+        }
+
+        .item-list li:last-child {
+            border-bottom: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            margin-top: 4rem;
+            color: #c9a961;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .categories {
+                grid-template-columns: 1fr;
+            }
+
+            .continent-btn {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
                      
