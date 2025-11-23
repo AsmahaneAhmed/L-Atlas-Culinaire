@@ -1,319 +1,4 @@
-<!DOCTYPE html> 
-   <head>
-  <title>L'Atlas Culinaire</title> 
-    <header>
-        
-        <h1>🌍 L'Atlas Culinaire 🌍</h1>
-        <p class="subtitle">Explorez les saveurs du monde</p>
-    </header>
-  </head> 
-
-<body>
-  
-   <nav>
-        <button class="continent-btn active" data-continent="accueil">Accueil</button>
-        <button class="continent-btn" data-continent="europe">Europe</button>
-        <button class="continent-btn" data-continent="asie">Asie</button>
-        <button class="continent-btn" data-continent="afrique">Afrique</button>
-        <button class="continent-btn" data-continent="ameriques">Amériques</button>
-        <button class="continent-btn" data-continent="oceanie">Océanie</button>
-    </nav>
-
-    <!-- Carte du monde cliquable -->
-    <div class="map-container">
-          <p class="map-instruction"> Cliquez sur un continent de la carte pour découvrir ses délices culinaires !</p>
-        <img src="https://images.pexels.com/photos/7412053/pexels-photo-7412053.jpeg" 
-             alt="carte du monde" 
-             usemap="#image-map">
-        
-        <map name="image-map">
-            <area alt="Recettes d'Amérique" 
-                  title="Cliquez pour voir les Amériques" 
-                  coords="115,52,308,187" 
-                  shape="rect"
-                  style="cursor: pointer;">
-            
-            <area alt="Recettes d'Europe" 
-                  title="Cliquez pour voir l'Europe" 
-                  coords="458,65,614,234" 
-                  shape="rect"
-                  style="cursor: pointer;">
-            
-            <area alt="Recettes d'Afrique" 
-                  title="Cliquez pour voir l'Afrique" 
-                  coords="482,310,717,555" 
-                  shape="rect"
-                  style="cursor: pointer;">
-            
-            <area alt="Recettes d'Océanie" 
-                  title="Cliquez pour voir l'Océanie" 
-                  coords="896,519,126" 
-                  shape="circle"
-                  style="cursor: pointer;">
-            
-            <area alt="Recettes d'Asie" 
-                  title="Cliquez pour voir l'Asie" 
-                  coords="646,77,1013,300" 
-                  shape="rect"
-                  style="cursor: pointer;">
-        </map>
-    </div>
-
-    <!-- Section Accueil -->
-    <section class="continent-section active" id="accueil"> 
-        <h2 class="continent-title">Accueil</h2>
-        <div class="categories">
-            <div class="category-card">
-                <h3 class="category-title">
-                    <span class="category-icon">✨</span> Présentation
-                </h3>
-                <ul class="item-list">
-                    <li>Bienvenue sur L'Atlas Culinaire</li>
-                    <li>Découvrez des recettes du monde</li>
-                    <li>Naviguez par continent</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <div class="container">
-        <!-- Europe -->
-        <section class="continent-section" id="europe">
-            <h2 class="continent-title">Europe</h2>
-            <div class="categories">
-                <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🍽️</span> Recettes</h3>
-                    <ul class="item-list">
-                        <li>Coq au Vin (France)</li>
-                        <li>Paella (Espagne)</li>
-                        <li>Osso Buco (Italie)</li>
-                        <li>Moussaka (Grèce)</li>
-                        <li>Wiener Schnitzel (Autriche)</li>
-                        <li>Fish & Chips (Angleterre)</li>
-                    </ul>
-                </div>
-                <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
-                    <ul class="item-list">
-                        <li>Crème Brûlée (France)</li>
-                        <li>Tiramisu (Italie)</li>
-                        <li>Trifle (Angleterre)</li>
-                        <li>Churros (Espagne)</li>
-                        <li>Scones (Irlande)</li>
-                    </ul>
-                </div>
-                <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
-                    <ul class="item-list">
-                        <li>Champagne (France)</li>
-                        <li>Porto (Portugal)</li>
-                        <li>Chianti (Italie)</li>
-                        <li>Bière Trappiste (Belgique)</li>
-                        <li>Ouzo (Grèce)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Asie -->
-        <section class="continent-section" id="asie">
-            <h2 class="continent-title">Asie</h2>
-            <div class="categories">
-                <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🍽️</span> Recettes</h3>
-                    <ul class="item-list">
-                        <li>Sushi & Sashimi (Japon)</li>
-                        <li>Pad Thai (Thaïlande)</li>
-                        <li>Dim Sum (Chine)</li>
-                        <li>Biryani (Inde)</li>
-                        <li>Pho (Vietnam)</li>
-                        <li>Bibimbap (Corée)</li>
-                    </ul>
-                </div>
-                <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
-                    <ul class="item-list">
-                        <li>Mochi (Japon)</li>
-                        <li>Mango Sticky Rice (Thaïlande)</li>
-                        <li>Mooncake (Chine)</li>
-                        <li>Gulab Jamun (Inde)</li>
-                        <li>Bingsu (Corée)</li>
-                    </ul>
-                </div>
-                <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
-                    <ul class="item-list">
-                        <li>Thé Matcha (Japon)</li>
-                        <li>Chai (Inde)</li>
-                        <li>Saké (Japon)</li>
-                        <li>Lassi (Inde)</li>
-                        <li>Bubble Tea (Taïwan)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Afrique -->
-        <section class="continent-section" id="afrique">
-            <h2 class="continent-title">Afrique</h2>
-            <div class="categories">
-                <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🍽️</span> Recettes</h3>
-                    <ul class="item-list">
-                        <li>Tajine (Maroc)</li>
-                        <li>Couscous (Maghreb)</li>
-                        <li>Jollof Rice (Afrique de l'Ouest)</li>
-                        <li>Bobotie (Afrique du Sud)</li>
-                        <li>Doro Wat (Éthiopie)</li>
-                        <li>Bunny Chow (Afrique du Sud)</li>
-                    </ul>
-                </div>
-                <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
-                    <ul class="item-list">
-                        <li>Malva Pudding (Afrique du Sud)</li>
-                        <li>Chebakia (Maroc)</li>
-                        <li>Mandazi (Kenya)</li>
-                        <li>Koeksister (Afrique du Sud)</li>
-                        <li>Ghoriba (Maroc)</li>
-                    </ul>
-                </div>
-                <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
-                    <ul class="item-list">
-                        <li>Thé à la Menthe (Maghreb)</li>
-                        <li>Café Éthiopien</li>
-                        <li>Rooibos (Afrique du Sud)</li>
-                        <li>Bissap (Sénégal)</li>
-                        <li>Amarula (Afrique du Sud)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Amériques -->
-        <section class="continent-section" id="ameriques">
-            <h2 class="continent-title">Amériques</h2>
-            <div class="categories">
-                <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🍽️</span> Recettes</h3>
-                    <ul class="item-list">
-                        <li>Tacos al Pastor (Mexique)</li>
-                        <li>Feijoada (Brésil)</li>
-                        <li>BBQ Ribs (États-Unis)</li>
-                        <li>Ceviche (Pérou)</li>
-                        <li>Poutine (Canada)</li>
-                        <li>Empanadas (Argentine)</li>
-                    </ul>
-                </div>
-                <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
-                    <ul class="item-list">
-                        <li>Churros (Mexique)</li>
-                        <li>Brigadeiro (Brésil)</li>
-                        <li>Flan (Cuba)</li>
-                        <li>Alfajores (Pérou/Chili)</li>
-                        <li>Cheesecake (États-Unis)</li>
-                        <li>Tres Leches (Porto Rico)</li>
-                    </ul>
-                </div>
-                <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
-                    <ul class="item-list">
-                        <li>Tequila (Mexique)</li>
-                        <li>Bourbon (États-Unis)</li>
-                        <li>Maté (Argentine/Uruguay)</li>
-                        <li>Cachaça (Brésil)</li>
-                        <li>Café Colombien (Colombie)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Océanie -->
-        <section class="continent-section" id="oceanie">
-            <h2 class="continent-title">Océanie</h2>
-            <div class="categories">
-                <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🍽️</span> Recettes</h3>
-                    <ul class="item-list">
-                        <li>Pavlova (Australie/N-Z)</li>
-                        <li>Meat Pie (Australie)</li>
-                        <li>Hangi (Nouvelle-Zélande)</li>
-                        <li>Lamington (Australie)</li>
-                        <li>Poisson Cru (Polynésie)</li>
-                        <li>Barramundi (Australie)</li>
-                    </ul>
-                </div>
-                <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
-                    <ul class="item-list">
-                        <li>Anzac Biscuits (Australie)</li>
-                        <li>Hokey Pokey (Nouvelle-Zélande)</li>
-                        <li>Pineapple Lumps (N-Z)</li>
-                        <li>Tim Tam (Australie)</li>
-                        <li>Coconut Cake (Pacifique)</li>
-                    </ul>
-                </div>
-                <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
-                    <ul class="item-list">
-                        <li>Flat White (Australie/N-Z)</li>
-                        <li>Kava (Pacifique)</li>
-                        <li>L&P (Nouvelle-Zélande)</li>
-                        <li>Sauvignon Blanc (N-Z)</li>
-                        <li>Bundaberg Rum (Australie)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 L'Atlas Culinaire - Explorez les saveurs du monde</p>
-    </footer>
-
-    <script>
-        const buttons = document.querySelectorAll('.continent-btn');
-        const sections = document.querySelectorAll('.continent-section');
-        const mapAreas = document.querySelectorAll('area');
-
-        // Navigation par boutons
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                const continent = button.getAttribute('data-continent');
-                changeContinent(continent);
-            });
-        });
-
-        // Navigation par carte cliquable
-        mapAreas.forEach((area, index) => {
-            area.addEventListener('click', (e) => {
-                e.preventDefault();
-                const continents = ['ameriques', 'europe', 'afrique', 'oceanie', 'asie'];
-                changeContinent(continents[index]);
-            });
-        });
-
-        // Fonction pour changer de continent
-        function changeContinent(continent) {
-            // Retirer la classe active de tous les boutons
-            buttons.forEach(btn => btn.classList.remove('active'));
-            
-            // Ajouter la classe active au bouton correspondant
-            const activeButton = document.querySelector(`[data-continent="${continent}"]`);
-            if (activeButton) activeButton.classList.add('active');
-            
-            // Cacher toutes les sections
-            sections.forEach(section => section.classList.remove('active'));
-            
-            // Afficher la section correspondante
-            const activeSection = document.getElementById(continent);
-            if (activeSection) activeSection.classList.add('active');
-        }
-    </script>
-</body>
-</html> 
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -343,7 +28,6 @@
             top: 0;
             z-index: 100;
         }
-
 
         h1 {
             font-size: 3rem;
@@ -392,7 +76,6 @@
             box-shadow: 0 6px 15px rgba(212, 175, 55, 0.5);
         }
 
-        /* Style de la carte cliquable */
         .map-container {
             text-align: center;
             margin: 2rem auto;
@@ -400,7 +83,12 @@
             padding: 2rem;
         }
 
-
+        .map-instruction {
+            color: #d4af37;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
 
         .map-container img {
             max-width: 100%;
@@ -529,5 +217,308 @@
                 font-size: 0.9rem;
             }
         }
-    </style> 
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>🌍 L'Atlas Culinaire 🌍</h1>
+        <p class="subtitle">Explorez les saveurs du monde</p>
+    </header>
+
+    <nav>
+        <button class="continent-btn active" data-continent="accueil">Accueil</button>
+        <button class="continent-btn" data-continent="europe">Europe</button>
+        <button class="continent-btn" data-continent="asie">Asie</button>
+        <button class="continent-btn" data-continent="afrique">Afrique</button>
+        <button class="continent-btn" data-continent="ameriques">Amériques</button>
+        <button class="continent-btn" data-continent="oceanie">Océanie</button>
+    </nav>
+
+    <div class="map-container">
+        <p class="map-instruction">Cliquez sur un continent de la carte pour découvrir ses délices culinaires !</p>
+        <img src="https://images.pexels.com/photos/7412053/pexels-photo-7412053.jpeg" 
+             alt="carte du monde" 
+             usemap="#image-map">
+        
+        <map name="image-map">
+            <area alt="Recettes d'Amérique" 
+                  title="Cliquez pour voir les Amériques" 
+                  coords="115,52,308,187" 
+                  shape="rect"
+                  href="#ameriques"
+                  style="cursor: pointer;">
+            
+            <area alt="Recettes d'Europe" 
+                  title="Cliquez pour voir l'Europe" 
+                  coords="458,65,614,234" 
+                  shape="rect"
+                  href="#europe"
+                  style="cursor: pointer;">
+            
+            <area alt="Recettes d'Afrique" 
+                  title="Cliquez pour voir l'Afrique" 
+                  coords="482,310,717,555" 
+                  shape="rect"
+                  href="#afrique"
+                  style="cursor: pointer;">
+            
+            <area alt="Recettes d'Océanie" 
+                  title="Cliquez pour voir l'Océanie" 
+                  coords="896,519,126" 
+                  shape="circle"
+                  href="#oceanie"
+                  style="cursor: pointer;">
+            
+            <area alt="Recettes d'Asie" 
+                  title="Cliquez pour voir l'Asie" 
+                  coords="646,77,1013,300" 
+                  shape="rect"
+                  href="#asie"
+                  style="cursor: pointer;">
+        </map>
+    </div>
+
+    <section class="continent-section active" id="accueil"> 
+        <h2 class="continent-title">Accueil</h2>
+        <div class="categories">
+            <div class="category-card">
+                <h3 class="category-title">
+                    <span class="category-icon">✨</span> Présentation
+                </h3>
+                <ul class="item-list">
+                    <li>Bienvenue sur L'Atlas Culinaire</li>
+                    <li>Découvrez des recettes du monde</li>
+                    <li>Naviguez par continent</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="continent-section" id="europe">
+            <h2 class="continent-title">Europe</h2>
+            <div class="categories">
+                <div class="category-card">
+                    <h3 class="category-title"><span class="category-icon">🍽️</span> Recettes</h3>
+                    <ul class="item-list">
+                        <li>Coq au Vin (France)</li>
+                        <li>Paella (Espagne)</li>
+                        <li>Osso Buco (Italie)</li>
+                        <li>Moussaka (Grèce)</li>
+                        <li>Wiener Schnitzel (Autriche)</li>
+                        <li>Fish & Chips (Angleterre)</li>
+                    </ul>
+                </div>
+                <div class="category-card">
+                    <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
+                    <ul class="item-list">
+                        <li>Crème Brûlée (France)</li>
+                        <li>Tiramisu (Italie)</li>
+                        <li>Trifle (Angleterre)</li>
+                        <li>Churros (Espagne)</li>
+                        <li>Scones (Irlande)</li>
+                    </ul>
+                </div>
+                <div class="category-card">
+                    <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
+                    <ul class="item-list">
+                        <li>Champagne (France)</li>
+                        <li>Porto (Portugal)</li>
+                        <li>Chianti (Italie)</li>
+                        <li>Bière Trappiste (Belgique)</li>
+                        <li>Ouzo (Grèce)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="continent-section" id="asie">
+            <h2 class="continent-title">Asie</h2>
+            <div class="categories">
+                <div class="category-card">
+                    <h3 class="category-title"><span class="category-icon">🍽️</span> Recettes</h3>
+                    <ul class="item-list">
+                        <li>Sushi & Sashimi (Japon)</li>
+                        <li>Pad Thai (Thaïlande)</li>
+                        <li>Dim Sum (Chine)</li>
+                        <li>Biryani (Inde)</li>
+                        <li>Pho (Vietnam)</li>
+                        <li>Bibimbap (Corée)</li>
+                    </ul>
+                </div>
+                <div class="category-card">
+                    <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
+                    <ul class="item-list">
+                        <li>Mochi (Japon)</li>
+                        <li>Mango Sticky Rice (Thaïlande)</li>
+                        <li>Mooncake (Chine)</li>
+                        <li>Gulab Jamun (Inde)</li>
+                        <li>Bingsu (Corée)</li>
+                    </ul>
+                </div>
+                <div class="category-card">
+                    <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
+                    <ul class="item-list">
+                        <li>Thé Matcha (Japon)</li>
+                        <li>Chai (Inde)</li>
+                        <li>Saké (Japon)</li>
+                        <li>Lassi (Inde)</li>
+                        <li>Bubble Tea (Taïwan)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="continent-section" id="afrique">
+            <h2 class="continent-title">Afrique</h2>
+            <div class="categories">
+                <div class="category-card">
+                    <h3 class="category-title"><span class="category-icon">🍽️</span> Recettes</h3>
+                    <ul class="item-list">
+                        <li>Tajine (Maroc)</li>
+                        <li>Couscous (Maghreb)</li>
+                        <li>Jollof Rice (Afrique de l'Ouest)</li>
+                        <li>Bobotie (Afrique du Sud)</li>
+                        <li>Doro Wat (Éthiopie)</li>
+                        <li>Bunny Chow (Afrique du Sud)</li>
+                    </ul>
+                </div>
+                <div class="category-card">
+                    <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
+                    <ul class="item-list">
+                        <li>Malva Pudding (Afrique du Sud)</li>
+                        <li>Chebakia (Maroc)</li>
+                        <li>Mandazi (Kenya)</li>
+                        <li>Koeksister (Afrique du Sud)</li>
+                        <li>Ghoriba (Maroc)</li>
+                    </ul>
+                </div>
+                <div class="category-card">
+                    <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
+                    <ul class="item-list">
+                        <li>Thé à la Menthe (Maghreb)</li>
+                        <li>Café Éthiopien</li>
+                        <li>Rooibos (Afrique du Sud)</li>
+                        <li>Bissap (Sénégal)</li>
+                        <li>Amarula (Afrique du Sud)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="continent-section" id="ameriques">
+            <h2 class="continent-title">Amériques</h2>
+            <div class="categories">
+                <div class="category-card">
+                    <h3 class="category-title"><span class="category-icon">🍽️</span> Recettes</h3>
+                    <ul class="item-list">
+                        <li>Tacos al Pastor (Mexique)</li>
+                        <li>Feijoada (Brésil)</li>
+                        <li>BBQ Ribs (États-Unis)</li>
+                        <li>Ceviche (Pérou)</li>
+                        <li>Poutine (Canada)</li>
+                        <li>Empanadas (Argentine)</li>
+                    </ul>
+                </div>
+                <div class="category-card">
+                    <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
+                    <ul class="item-list">
+                        <li>Churros (Mexique)</li>
+                        <li>Brigadeiro (Brésil)</li>
+                        <li>Flan (Cuba)</li>
+                        <li>Alfajores (Pérou/Chili)</li>
+                        <li>Cheesecake (États-Unis)</li>
+                        <li>Tres Leches (Porto Rico)</li>
+                    </ul>
+                </div>
+                <div class="category-card">
+                    <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
+                    <ul class="item-list">
+                        <li>Tequila (Mexique)</li>
+                        <li>Bourbon (États-Unis)</li>
+                        <li>Maté (Argentine/Uruguay)</li>
+                        <li>Cachaça (Brésil)</li>
+                        <li>Café Colombien (Colombie)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="continent-section" id="oceanie">
+            <h2 class="continent-title">Océanie</h2>
+            <div class="categories">
+                <div class="category-card">
+                    <h3 class="category-title"><span class="category-icon">🍽️</span> Recettes</h3>
+                    <ul class="item-list">
+                        <li>Pavlova (Australie/N-Z)</li>
+                        <li>Meat Pie (Australie)</li>
+                        <li>Hangi (Nouvelle-Zélande)</li>
+                        <li>Lamington (Australie)</li>
+                        <li>Poisson Cru (Polynésie)</li>
+                        <li>Barramundi (Australie)</li>
+                    </ul>
+                </div>
+                <div class="category-card">
+                    <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
+                    <ul class="item-list">
+                        <li>Anzac Biscuits (Australie)</li>
+                        <li>Hokey Pokey (Nouvelle-Zélande)</li>
+                        <li>Pineapple Lumps (N-Z)</li>
+                        <li>Tim Tam (Australie)</li>
+                        <li>Coconut Cake (Pacifique)</li>
+                    </ul>
+                </div>
+                <div class="category-card">
+                    <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
+                    <ul class="item-list">
+                        <li>Flat White (Australie/N-Z)</li>
+                        <li>Kava (Pacifique)</li>
+                        <li>L&P (Nouvelle-Zélande)</li>
+                        <li>Sauvignon Blanc (N-Z)</li>
+                        <li>Bundaberg Rum (Australie)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 L'Atlas Culinaire - Explorez les saveurs du monde</p>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.continent-btn');
+        const sections = document.querySelectorAll('.continent-section');
+        const mapAreas = document.querySelectorAll('area');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const continent = button.getAttribute('data-continent');
+                changeContinent(continent);
+            });
+        });
+
+        mapAreas.forEach((area, index) => {
+            area.addEventListener('click', (e) => {
+                e.preventDefault();
+                const continents = ['ameriques', 'europe', 'afrique', 'oceanie', 'asie'];
+                changeContinent(continents[index]);
+            });
+        });
+
+        function changeContinent(continent) {
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            const activeButton = document.querySelector(`[data-continent="${continent}"]`);
+            if (activeButton) activeButton.classList.add('active');
+            
+            sections.forEach(section => section.classList.remove('active'));
+            
+            const activeSection = document.getElementById(continent);
+            if (activeSection) activeSection.classList.add('active');
+        }
+    </script>
+</body>
+</html>
                      
