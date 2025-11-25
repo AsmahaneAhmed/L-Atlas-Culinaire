@@ -193,6 +193,91 @@
             border-bottom: none;
         }
 
+        .item-list li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .item-text {
+            flex: 1;
+        }
+
+        .item-image {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .item-image:hover {
+            transform: scale(1.1);
+            border-color: #d4af37;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 10px;
+            box-shadow: 0 10px 50px rgba(212, 175, 55, 0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: #d4af37;
+            color: #1a1a2e;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            background: #ffd700;
+            transform: rotate(90deg);
+        }
+
+        .lightbox-caption {
+            text-align: center;
+            color: #d4af37;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+
         footer {
             text-align: center;
             padding: 2rem;
@@ -217,7 +302,7 @@
         }
     </style>
 </head>
-
+    
 <body>
     <header>
         <h1>🌍 L'Atlas Culinaire 🌍</h1>
@@ -301,14 +386,26 @@
             <h2 class="continent-title">Europe</h2>
             <div class="categories">
                 <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🍽️</span> Recettes</h3>
-                    <ul class="item-list">
-                        <li>Coq au Vin (France)</li>
-                        <li>Paella (Espagne)</li>
+                    <h3 class="category-title"><span class="category-icon">🍽️</span> Plats</h3>
+                    <ul class="item-list">                  
+                 <li>
+    <span class="item-text">Polvo à Lagareiro (Portugal)</span>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Polvo_%C3%A0_Lagareiro_%288568957506%29.jpg" 
+         alt="Polvo à Lagareiro"
+         class="item-image"
+         onclick="openLightbox(this)">
+</li>
+                        <li> 
+                         <span class="item-text">Tortilla Española (Espagne)</span>
+                       <img src="https://img.goodfon.com/original/1366x768/d/5c/tortilia-chai-zelen.jpg?d=1"
+         alt="Tortilla Española"
+         class="item-image"
+         onclick="openLightbox(this)">     
+                         </li>
                         <li>Osso Buco (Italie)</li>
-                        <li>Moussaka (Grèce)</li>
                         <li>Wiener Schnitzel (Autriche)</li>
-                        <li>Fish & Chips (Angleterre)</li>
+                     
                     </ul>
                 </div>
                 <div class="category-card">
@@ -338,7 +435,7 @@
             <h2 class="continent-title">Asie</h2>
             <div class="categories">
                 <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🍽️</span> Recettes</h3>
+                    <h3 class="category-title"><span class="category-icon">🍽️</span> Plats</h3>
                     <ul class="item-list">
                         <li>Sushi & Sashimi (Japon)</li>
                         <li>Pad Thai (Thaïlande)</li>
@@ -375,7 +472,7 @@
             <h2 class="continent-title">Afrique</h2>
             <div class="categories">
                 <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🍽️</span> Recettes</h3>
+                    <h3 class="category-title"><span class="category-icon">🍽️</span> Plats</h3>
                     <ul class="item-list">
                         <li>Tajine (Maroc)</li>
                         <li>Couscous (Maghreb)</li>
@@ -412,7 +509,7 @@
             <h2 class="continent-title">Amériques</h2>
             <div class="categories">
                 <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🍽️</span> Recettes</h3>
+                    <h3 class="category-title"><span class="category-icon">🍽️</span> Plats</h3>
                     <ul class="item-list">
                         <li>Tacos al Pastor (Mexique)</li>
                         <li>Feijoada (Brésil)</li>
@@ -450,7 +547,7 @@
             <h2 class="continent-title">Océanie</h2>
             <div class="categories">
                 <div class="category-card">
-                    <h3 class="category-title"><span class="category-icon">🍽️</span> Recettes</h3>
+                    <h3 class="category-title"><span class="category-icon">🍽️</span> Plats</h3>
                     <ul class="item-list">
                         <li>Pavlova (Australie/N-Z)</li>
                         <li>Meat Pie (Australie)</li>
@@ -519,7 +616,31 @@
             const activeSection = document.getElementById(continent);
             if (activeSection) activeSection.classList.add('active');
         }
+    
+      function openLightbox(img) {
+    const lightbox = document.querySelector('.lightbox');
+    const lightboxImage = document.querySelector('.lightbox-image');
+    const lightboxCaption = document.querySelector('.lightbox-caption');
+
+    lightboxImage.src = img.src;
+    lightboxCaption.textContent = img.alt;
+    lightbox.classList.add('active');
+}
+
+function closeLightbox() {
+    document.querySelector('.lightbox').classList.remove('active');
+}
+      
     </script>
+  <!-- Lightbox -->
+<div class="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img class="lightbox-image" src="" alt="">
+        <button class="lightbox-close" onclick="closeLightbox()">×</button>
+        <p class="lightbox-caption"></p>
+    </div>
+</div>
+
 </body>
 </html>
                      
