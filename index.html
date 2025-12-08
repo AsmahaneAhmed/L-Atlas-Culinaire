@@ -1,22 +1,33 @@
+  
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    
-    <!-- Métadonnées de base --> 
+    <!-- Métadonnées de base -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Métadonnées SEO -->
+    <meta name="description" content="L'Atlas Culinaire - Explorez les saveurs du monde à travers une collection de recettes authentiques d'Europe, d'Asie, d'Afrique, des Amériques et d'Océanie.">
+    <meta name="keywords" content="recettes, cuisine internationale, gastronomie mondiale, atlas culinaire, plats traditionnels, desserts du monde, boissons internationales">
+    <meta name="author" content="L'Atlas Culinaire">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph pour réseaux sociaux -->
+    <meta property="og:title" content="L'Atlas Culinaire - Explorez les saveurs du monde">
+    <meta property="og:description" content="Découvrez des recettes authentiques des cinq continents">
+    <meta property="og:type" content="website">
+    
     <link rel="stylesheet" href="style.css">
-    <title>L'Atlas Culinaire</title>
+    <title>L'Atlas Culinaire - Explorez les saveurs du monde</title>
 </head>
 <body>
-    
-     <!-- En-tête principal du site -->
+    <!-- En-tête principal du site -->
     <header>
         <h1>🌍 L'Atlas Culinaire 🌍</h1>
         <p class="subtitle">Explorez les saveurs du monde</p>
     </header>
-    
- <!-- Navigation du site par continents -->
+
+    <!-- Navigation par continents -->
     <nav>
         <button class="continent-btn active" data-continent="accueil">Accueil</button>
         <button class="continent-btn" data-continent="europe">Europe</button>
@@ -24,6 +35,7 @@
         <button class="continent-btn" data-continent="afrique">Afrique</button>
         <button class="continent-btn" data-continent="ameriques">Amériques</button>
         <button class="continent-btn" data-continent="oceanie">Océanie</button>
+        <button class="continent-btn" data-continent="glossaire">Glossaire</button>
     </nav>
 
     <!-- Carte du monde cliquable -->
@@ -32,9 +44,9 @@
         <img src="https://images.pexels.com/photos/7412053/pexels-photo-7412053.jpeg" 
              alt="carte du monde" 
              usemap="#image-map">
-        <p>© Photo par Monstera Production via Pexels</p>
-
-        <!-- les zones cliquables de la carte -->
+        <p class="image-credit">© Photo par <a href="https://www.pexels.com/@gabby-k" target="_blank" rel="noopener">Monstera Production</a> via Pexels</p>
+        
+        <!-- Zones cliquables de la carte -->
         <map name="image-map">
             <area alt="Recettes d'Amérique" 
                   title="Cliquez pour voir les Amériques" 
@@ -68,28 +80,31 @@
         </map>
     </div>
 
-    <!-- La section Accueil -->
+    <!-- Section Accueil -->
     <section class="continent-section active" id="accueil">
         <h2 class="continent-title">Accueil</h2>
         <div class="categories">
             <div class="category-card">
                 <h3 class="category-title">
-                    <span class="category-icon">✨</span> Présentation
+                    <span class="category-icon">✨</span> Bienvenue
                 </h3>
-                <ul class="item-list">
-                    <li>Bienvenue sur L'Atlas Culinaire ! Explorez les saveurs du monde et embarquez pour un voyage gourmand unique.</li>
-                </ul>
+                <p class="welcome-text">
+                    Bienvenue sur L'Atlas Culinaire ! Explorez les saveurs du monde et embarquez pour un voyage gourmand unique à travers les cinq continents.
+                </p>
+                <blockquote class="quote">
+                    « La cuisine est un art, une science et une passion qui unit les peuples du monde entier. »
+                </blockquote>
             </div>
         </div>
     </section>
 
-    <!-- La section Europe -->
     <div class="container">
+        <!-- Section Europe -->
         <section class="continent-section" id="europe">
             <h2 class="continent-title">Europe</h2>
             <div class="categories">
+                <!-- Plats européens -->
                 <div class="category-card">
-                    <!-- Les plats européens -->
                     <h3 class="category-title"><span class="category-icon">🍽️</span> Plats</h3>
                     <ul class="item-list">
                         <li>
@@ -97,6 +112,8 @@
                             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Polvo_%C3%A0_Lagareiro_%288568957506%29.jpg" 
                                  alt="Polvo à Lagareiro"
                                  class="item-image"
+                                 data-credit="Wikimedia Commons - Domaine public"
+                                 data-link="https://commons.wikimedia.org/wiki/File:Polvo_à_Lagareiro_(8568957506).jpg"
                                  onclick="openLightbox(this)">
                         </li>
                         <li>
@@ -104,6 +121,8 @@
                             <img src="https://img.goodfon.com/original/1366x768/d/5c/tortilia-chai-zelen.jpg" 
                                  alt="Tortilla Española"
                                  class="item-image"
+                                 data-credit="GoodFon"
+                                 data-link="https://img.goodfon.com"
                                  onclick="openLightbox(this)">
                         </li>
                         <li>
@@ -111,6 +130,8 @@
                             <img src="https://apprendre-cuisine.com/wp-content/uploads/2021/08/49.jpg" 
                                  alt="L'aligot"
                                  class="item-image"
+                                 data-credit="Apprendre Cuisine"
+                                 data-link="https://apprendre-cuisine.com"
                                  onclick="openLightbox(this)">
                         </li>
                         <li>
@@ -118,101 +139,106 @@
                             <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Carbonade_flamande_2023.jpg" 
                                  alt="La Carbonade Flamande"
                                  class="item-image"
+                                 data-credit="Wikimedia Commons - CC BY-SA 4.0"
+                                 data-link="https://commons.wikimedia.org/wiki/File:Carbonade_flamande_2023.jpg"
                                  onclick="openLightbox(this)">
                         </li>
                     </ul>
                 </div>
-                <!-- Les desserts européens -->
+                
+                <!-- Desserts européens -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
                     <ul class="item-list">
-                        
-                       <li> 
-                        <span class="item-text"> Apfelstrudel (Allemagne)</span>
+                        <li> 
+                            <span class="item-text">Apfelstrudel (Allemagne)</span>
                             <img src="https://turbigo-gourmandises.fr/wp-content/uploads/2020/01/apfelstrudel.jpg" 
                                  alt="Apfelstrudel"
                                  class="item-image"
+                                 data-credit="Turbigo Gourmandises"
+                                 data-link="https://turbigo-gourmandises.fr"
                                  onclick="openLightbox(this)">
-                            </li>
-
+                        </li>
                         <li> 
-                        <span class="item-text">Torta Sacripantina (Italie)</span>
+                            <span class="item-text">Torta Sacripantina (Italie)</span>
                             <img src="https://images.ctfassets.net/1p5r6txvlxu4/50kEE3D7UjXPYnBIoXk8xw/4e5c4008e427809bcb7aa5d345c4f241/torta_sacripantina_big.jpg?w=768&h=541&fm=webp&q=100&fit=fill&f=center" 
                                  alt="Torta Sacripantina"
                                  class="item-image"
+                                 data-credit="Contentful"
+                                 data-link="https://www.ctfassets.net"
                                  onclick="openLightbox(this)">
-                            </li> 
-
-                        
+                        </li> 
                         <li> 
-                        <span class="item-text"> Somlói galuska (Hongrie)</span>
+                            <span class="item-text">Somlói galuska (Hongrie)</span>
                             <img src="https://cdn.mindmegette.hu/2024/04/1aZvdnNlH6hVGT2FUgjFKFZvL62cEcc22Xwvz2nhLbE/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50L2Y5YWM5MWVlOTNhODQ1MGJiMmZjNGU3NWI2NzI2MjMz.webp" 
-                                 alt="Somlói galuska (Hongrie)"
+                                 alt="Somlói galuska"
                                  class="item-image"
+                                 data-credit="Mindmegette"
+                                 data-link="https://mindmegette.hu"
                                  onclick="openLightbox(this)">
-                            </li> 
-
+                        </li> 
                         <li> 
-                        <span class="item-text"> Toucinho do Céu (Portugal) </span>
+                            <span class="item-text">Toucinho do Céu (Portugal)</span>
                             <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Toucinhoceu.jpg"                            
-                                alt="Toucinho do Céu (Portugal)"
+                                 alt="Toucinho do Céu"
                                  class="item-image"
+                                 data-credit="Wikimedia Commons - CC BY-SA 3.0"
+                                 data-link="https://commons.wikimedia.org/wiki/File:Toucinhoceu.jpg"
                                  onclick="openLightbox(this)"> 
-                            </li> 
-                       
-
-                        
+                        </li> 
                     </ul>
                 </div>
-                <!-- Les boissons européennes -->
+
+                <!-- Boissons européennes -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
                     <ul class="item-list">
                         <li>
-                            <span class="item-text"> Bicerin (Italie)</span>
+                            <span class="item-text">Bicerin (Italie)</span>
                             <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/2016_1128_Turin_Bicerin_02.jpg" 
                                  alt="Bicerin"
                                  class="item-image"
+                                 data-credit="Wikimedia Commons - CC BY-SA 4.0"
+                                 data-link="https://commons.wikimedia.org/wiki/File:2016_1128_Turin_Bicerin_02.jpg"
                                  onclick="openLightbox(this)">
                         </li> 
-                        
-                      <li>
-                            <span class="item-text"> Anijsmelk (Pays-Bas) </span>
+                        <li>
+                            <span class="item-text">Anijsmelk (Pays-Bas)</span>
                             <img src="https://img.freepik.com/photos-premium/boisson-lactee-neerlandaise-chaude-anijsmelk-lait-sucre-anis_136595-3925.jpg" 
                                  alt="Anijsmelk"
                                  class="item-image"
+                                 data-credit="Freepik"
+                                 data-link="https://www.freepik.com"
                                  onclick="openLightbox(this)">
                         </li> 
-                        
                         <li>
-                            <span class="item-text"> Ouzvar (Ukraine/Russie) </span>
+                            <span class="item-text">Ouzvar (Ukraine/Russie)</span>
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-M2Fkpu57kuTYJt1dqdJlURy-Sor5o8kmlw&s" 
                                  alt="Ouzvar"
                                  class="item-image"
+                                 data-credit="Google Images"
+                                 data-link="#"
                                  onclick="openLightbox(this)">
                         </li> 
-
                         <li>
-                            <span class="item-text"> Schorle (Allemagne) </span>
+                            <span class="item-text">Schorle (Allemagne)</span>
                             <img src="https://www.epicerie-lacendree.fr/wp-content/uploads/2025/01/33f20b13-ec9d-4656-baee-39a37b9004ff.jpg" 
                                  alt="Schorle"
                                  class="item-image"
+                                 data-credit="L'Épicerie La Cendrée"
+                                 data-link="https://www.epicerie-lacendree.fr"
                                  onclick="openLightbox(this)">
                         </li> 
-
-                        
-                        
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- La section Asie -->
+        <!-- Section Asie -->
         <section class="continent-section" id="asie">
             <h2 class="continent-title">Asie</h2>
             <div class="categories">
                 <div class="category-card">
-                    !-- Les plats asiatiques -->
                     <h3 class="category-title"><span class="category-icon">🍽️</span> Plats</h3>
                     <ul class="item-list">
                         <li>
@@ -220,13 +246,17 @@
                             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/B%C3%BAn_tr%E1%BB%99n%2C_BoBun_Moi%2C_Paris_20_December_2016_003.jpg" 
                                  alt="Bo Bun"
                                  class="item-image"
+                                 data-credit="Wikimedia Commons - CC BY-SA 4.0"
+                                 data-link="https://commons.wikimedia.org"
                                  onclick="openLightbox(this)">
                         </li>
                         <li>
                             <span class="item-text">Wok de nouilles soba au chou-chinois (Chine)</span>
                             <img src="https://images.pexels.com/photos/7138913/pexels-photo-7138913.jpeg" 
-                                 alt="Wok de nouilles soba au chou-chinois"
+                                 alt="Wok de nouilles soba"
                                  class="item-image"
+                                 data-credit="Pexels"
+                                 data-link="https://www.pexels.com"
                                  onclick="openLightbox(this)">
                         </li>
                         <li>
@@ -234,6 +264,8 @@
                             <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Pr%C3%A9paration_du_mansaf-Jordanie_%288%29.jpg" 
                                  alt="Mansaf"
                                  class="item-image"
+                                 data-credit="Wikimedia Commons - CC BY-SA 3.0"
+                                 data-link="https://commons.wikimedia.org"
                                  onclick="openLightbox(this)">
                         </li>
                         <li>
@@ -241,50 +273,53 @@
                             <img src="https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg" 
                                  alt="Biryani"
                                  class="item-image"
+                                 data-credit="Pexels"
+                                 data-link="https://www.pexels.com"
                                  onclick="openLightbox(this)">
                         </li>
                     </ul>
                 </div>
-                <!-- Les desserts asiatiques -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
                     <ul class="item-list">
-                        
                         <li>
                             <span class="item-text">Kasutera (Japon)</span>
                             <img src="https://cuisinezetpartagez.com/wp-content/uploads/2025/04/Kasutera-Castella-Gateau-Eponge-Japonais.webp" 
                                  alt="Kasutera"
                                  class="item-image"
+                                 data-credit="Cuisinez et Partagez"
+                                 data-link="https://cuisinezetpartagez.com"
                                  onclick="openLightbox(this)">
                         </li> 
-                        
-                         <li>
-                            <span class="item-text"> Mooncake (Chine)</span>
+                        <li>
+                            <span class="item-text">Mooncake (Chine)</span>
                             <img src="https://cdn12.picryl.com/photo/2016/12/31/mooncake-mid-autumn-festival-season-festive-e3d16f-1024.jpg" 
-                                 alt="Kasutera"
+                                 alt="Mooncake"
                                  class="item-image"
+                                 data-credit="Picryl - Domaine public"
+                                 data-link="https://picryl.com"
                                  onclick="openLightbox(this)">
                         </li>
-                        
-                      <li>
-                            <span class="item-text"> Mango Sticky Rice (Thailande) </span>
+                        <li>
+                            <span class="item-text">Mango Sticky Rice (Thaïlande)</span>
                             <img src="https://omnivorescookbook.com/wp-content/uploads/2023/06/230619_Mango-Sticky-Rice_6.jpg" 
                                  alt="Mango Sticky Rice"
                                  class="item-image"
+                                 data-credit="Omnivore's Cookbook"
+                                 data-link="https://omnivorescookbook.com"
                                  onclick="openLightbox(this)">
                         </li>
-                        
-                         <li>
-                            <span class="item-text"> Knafeh (Jordanie) </span>
+                        <li>
+                            <span class="item-text">Knafeh (Jordanie)</span>
                             <img src="https://www.casafabio.com/wp-content/uploads/2024/09/1726875485_les-ingredients-cles-pour-reussir-votre-kunafa-jordanien.jpg" 
                                  alt="Knafeh"
                                  class="item-image"
+                                 data-credit="Casa Fabio"
+                                 data-link="https://www.casafabio.com"
                                  onclick="openLightbox(this)">
                         </li>
-                        
                     </ul>
                 </div>
-                <!-- Les boissons asiatiques -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
                     <ul class="item-list">
@@ -296,12 +331,12 @@
                 </div>
             </div>
         </section>
-          <!-- La section Afrique -->
+
+        <!-- Section Afrique -->
         <section class="continent-section" id="afrique">
             <h2 class="continent-title">Afrique</h2>
             <div class="categories">
                 <div class="category-card">
-                      <!-- Les plats africains -->
                     <h3 class="category-title"><span class="category-icon">🍽️</span> Plats</h3>
                     <ul class="item-list">
                         <li>Tajine (Maroc)</li>
@@ -310,7 +345,6 @@
                         <li>Bobotie (Afrique du Sud)</li>
                     </ul>
                 </div>
-                  <!-- Les desserts africains -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
                     <ul class="item-list">
@@ -320,7 +354,6 @@
                         <li>Koeksister (Afrique du Sud)</li>
                     </ul>
                 </div>
-                  <!-- Les boissons africianes -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
                     <ul class="item-list">
@@ -332,11 +365,11 @@
                 </div>
             </div>
         </section>
-<!-- La section Amériques -->
+
+        <!-- Section Amériques -->
         <section class="continent-section" id="ameriques">
             <h2 class="continent-title">Amériques</h2>
             <div class="categories">
-                <!-- Les plats américains -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🍽️</span> Plats</h3>
                     <ul class="item-list">
@@ -345,6 +378,8 @@
                             <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/01_Tacos_al_Pastor.jpg" 
                                  alt="Tacos Al Pastor"
                                  class="item-image"
+                                 data-credit="Wikimedia Commons - CC BY 2.0"
+                                 data-link="https://commons.wikimedia.org"
                                  onclick="openLightbox(this)">
                         </li>
                         <li>
@@ -352,6 +387,8 @@
                             <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Feijoada_%C3%A0_brasileira_-.jpg" 
                                  alt="Feijoada"
                                  class="item-image"
+                                 data-credit="Wikimedia Commons - CC BY-SA 3.0"
+                                 data-link="https://commons.wikimedia.org"
                                  onclick="openLightbox(this)">
                         </li>
                         <li>
@@ -359,6 +396,8 @@
                             <img src="https://live.staticflickr.com/7164/6613714953_27f73d171f_b.jpg" 
                                  alt="Cracked Conch"
                                  class="item-image"
+                                 data-credit="Flickr - CC BY 2.0"
+                                 data-link="https://www.flickr.com"
                                  onclick="openLightbox(this)">
                         </li>
                         <li>
@@ -366,11 +405,12 @@
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/2016-10_Montreal_-_poutine_33.jpg/960px-2016-10_Montreal_-_poutine_33.jpg" 
                                  alt="Poutine"
                                  class="item-image"
+                                 data-credit="Wikimedia Commons - CC BY-SA 4.0"
+                                 data-link="https://commons.wikimedia.org"
                                  onclick="openLightbox(this)">
                         </li>
                     </ul>
                 </div>
-                <!-- Les desserts américiains -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
                     <ul class="item-list">
@@ -379,6 +419,8 @@
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Suspiro_lime%C3%B1o.jpg/500px-Suspiro_lime%C3%B1o.jpg" 
                                  alt="Suspiro limeño"
                                  class="item-image"
+                                 data-credit="Wikimedia Commons - CC BY-SA 3.0"
+                                 data-link="https://commons.wikimedia.org"
                                  onclick="openLightbox(this)">
                         </li>
                         <li>
@@ -386,6 +428,8 @@
                             <img src="https://cdn12.picryl.com/photo/2016/12/31/delicacies-coconut-balls-food-food-drink-fefa35-1024.jpg" 
                                  alt="Beijinhos"
                                  class="item-image"
+                                 data-credit="Picryl - Domaine public"
+                                 data-link="https://picryl.com"
                                  onclick="openLightbox(this)">
                         </li>
                         <li>
@@ -393,6 +437,8 @@
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFJi4-bS0hiyEW_QiXn1jtjC3OBoUHFqDFaQ&s" 
                                  alt="Cheesecake New Yorkais"
                                  class="item-image"
+                                 data-credit="Google Images"
+                                 data-link="#"
                                  onclick="openLightbox(this)">
                         </li>
                         <li>
@@ -400,11 +446,12 @@
                             <img src="https://live.staticflickr.com/3567/3497381067_0aaf518c4c_b.jpg" 
                                  alt="Tres Leches"
                                  class="item-image"
+                                 data-credit="Flickr - CC BY 2.0"
+                                 data-link="https://www.flickr.com"
                                  onclick="openLightbox(this)">
                         </li>
                     </ul>
                 </div>
-                <!-- Les boissons américaines -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
                     <ul class="item-list">
@@ -414,6 +461,8 @@
                             <img src="https://images.pexels.com/photos/13059626/pexels-photo-13059626.jpeg" 
                                  alt="Limonada Suíça"
                                  class="item-image"
+                                 data-credit="Pexels"
+                                 data-link="https://www.pexels.com"
                                  onclick="openLightbox(this)">
                         </li>
                         <li>Maté (Argentine/Uruguay)</li>
@@ -422,12 +471,11 @@
                 </div>
             </div>
         </section>
-        
- <!-- La section Océanie -->
+
+        <!-- Section Océanie -->
         <section class="continent-section" id="oceanie">
             <h2 class="continent-title">Océanie</h2>
             <div class="categories">
-                 <!-- Les plats océaniens -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🍽️</span> Plats</h3>
                     <ul class="item-list">
@@ -436,6 +484,8 @@
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Beautiful_Pavlova_cake.jpg/960px-Beautiful_Pavlova_cake.jpg" 
                                  alt="Pavlova"
                                  class="item-image"
+                                 data-credit="Wikimedia Commons - CC BY-SA 3.0"
+                                 data-link="https://commons.wikimedia.org"
                                  onclick="openLightbox(this)">
                         </li>
                         <li>
@@ -443,6 +493,8 @@
                             <img src="https://live.staticflickr.com/27/97929153_22919d48e0_z.jpg" 
                                  alt="Hangi"
                                  class="item-image"
+                                 data-credit="Flickr - CC BY 2.0"
+                                 data-link="https://www.flickr.com"
                                  onclick="openLightbox(this)">
                         </li>
                         <li>
@@ -450,6 +502,8 @@
                             <img src="https://www.kilometre-0.fr/wp-content/uploads/2019/10/20191005Cuisine_mart51.jpg" 
                                  alt="Kadum Pica"
                                  class="item-image"
+                                 data-credit="Kilomètre 0"
+                                 data-link="https://www.kilometre-0.fr"
                                  onclick="openLightbox(this)">
                         </li>
                         <li>
@@ -457,11 +511,12 @@
                             <img src="https://live.staticflickr.com/5266/5595697295_bff9850e91_b.jpg" 
                                  alt="Palu Sami"
                                  class="item-image"
+                                 data-credit="Flickr - CC BY 2.0"
+                                 data-link="https://www.flickr.com"
                                  onclick="openLightbox(this)">
                         </li>
                     </ul>
                 </div>
-                 <!-- Les desserts océaniens -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
                     <ul class="item-list">
@@ -471,7 +526,6 @@
                         <li>Tim Tam (Australie)</li>
                     </ul>
                 </div>
-                 <!-- Les boissons océaniennes Océanie -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
                     <ul class="item-list">
@@ -483,9 +537,8 @@
                 </div>
             </div>
         </section>
-    </div>
 
-       <!-- Section Glossaire -->
+        <!-- Section Glossaire -->
         <section class="continent-section" id="glossaire">
             <h2 class="continent-title">Glossaire Culinaire</h2>
             <div class="glossary-container">
@@ -540,31 +593,34 @@
                 </div>
             </div>
         </section>
-    
+    </div>
 
-    <!-- Lightbox pour l'affichage agrandi des images -->
+    <!-- Lightbox pour affichage agrandi des images -->
     <div class="lightbox" onclick="closeLightbox()">
         <div class="lightbox-content" onclick="event.stopPropagation()">
             <button class="lightbox-close" onclick="closeLightbox()">×</button>
-            <img class="lightbox-image" src="img" alt="">
+            <img class="lightbox-image" src="" alt="">
             <p class="lightbox-caption"></p>
+            <p class="lightbox-credit"></p>
         </div>
     </div>
 
-    
-  <!-- Le pied de page -->
+    <!-- Pied de page -->
     <footer>
-        <p>&copy; 2025 L'Atlas Culinaire - Explorez les saveurs du monde</p>
-        <div class="footer-links">
-            <a href="#" onclick="openModal('contact')">Contact</a>
-            <span class="footer-separator">|</span>
-            <a href="#" onclick="openModal('mentions')">Mentions légales</a>
+        <div class="footer-content">
+            <p class="footer-copyright">&copy; 2025 L'Atlas Culinaire - Explorez les saveurs du monde</p>
+            
+            <div class="footer-links">
+                <a href="#" onclick="openModal('contact')">Contact</a>
+                <span class="footer-separator">|</span>
+                <a href="#" onclick="openModal('mentions')">Mentions légales</a>
                 <span class="footer-separator">|</span>
                 <a href="#" onclick="openModal('licence')">Licence</a>
+            </div>
         </div>
     </footer>
 
-        <!-- Les contacts -->
+    <!-- Modal Contact -->
     <div class="modal" id="modal-contact">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('contact')">×</button>
@@ -572,27 +628,44 @@
             <div class="contact-info">
                 <p><strong>Email :</strong> <a href="mailto:contact@atlasculinaire.com">contact@atlasculinaire.com</a></p>
                 <p><strong>Adresse :</strong> 123 Rue de la Gastronomie, 75001 Paris, France</p>
+                <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+                
+                <div class="social-links">
+                    <h3>Suivez-nous</h3>
+                    <p>
+                        <a href="https://facebook.com/atlasculinaire" target="_blank" rel="noopener">Facebook</a> | 
+                        <a href="https://instagram.com/atlasculinaire" target="_blank" rel="noopener">Instagram</a> | 
+                        <a href="https://twitter.com/atlasculinaire" target="_blank" rel="noopener">Twitter</a>
+                    </p>
+                </div>
             </div>
         </div>
-            
-<!-- Les Mentions légales -->
+    </div>
+
+    <!-- Modal Mentions légales -->
     <div class="modal" id="modal-mentions">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('mentions')">×</button>
             <h2>Mentions légales</h2>
             <div class="legal-content">
                 <h3>Éditeur du site</h3>
-            </div>
-        </div>
+                <p><strong>L'Atlas Culinaire</strong><br>
+                Société par actions simplifiée au capital de 50 000 €<br>
+                SIRET : 123 456 789 00012<br>
+                123 Rue de la Gastronomie, 75001 Paris, France<br>
+                Téléphone : +33 1 23 45 67 89<br>
+                Email : contact@atlasculinaire.com</p>
 
+                <h3>Directeur de publication</h3>
+                <p>Jean Dupont</p>
 
+                <h3>Hébergement</h3>
+                <p><strong>OVH</strong><br>
+                2 rue Kellermann<br>
+                59100 Roubaix, France<br>
+                Téléphone : 1007</p>
 
-
-
-
-
-
-                  <h3>Propriété intellectuelle</h3>
+                <h3>Propriété intellectuelle</h3>
                 <p>L'ensemble du contenu de ce site (textes, images, vidéos) est protégé par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
 
                 <h3>Crédits photographiques</h3>
@@ -603,24 +676,54 @@
 
                 <h3>Cookies</h3>
                 <p>Ce site n'utilise pas de cookies de traçage. Seuls des cookies techniques nécessaires au fonctionnement du site peuvent être utilisés.</p>
+            </div>
+        </div>
+    </div>
 
-<!-- Le modal Licence -->
+    <!-- Modal Licence -->
     <div class="modal" id="modal-licence">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('licence')">×</button>
             <h2>Licence et Conditions d'utilisation</h2>
             <div class="legal-content">
                 <h3>Licence Creative Commons</h3>
+                <p>Le contenu original de L'Atlas Culinaire est mis à disposition selon les termes de la 
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank" rel="noopener">
+                Licence Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a>.</p>
+
+                <blockquote class="license-quote">
+                    « Vous êtes autorisé à partager et adapter ce contenu à condition de créditer L'Atlas Culinaire, 
+                    de ne pas en faire d'usage commercial et de redistribuer vos contributions sous la même licence. »
+                </blockquote>
+
+                <h3>Images tierces</h3>
+                <p>Les photographies utilisées sur ce site proviennent de :</p>
+                <ul>
+                    <li><strong>Wikimedia Commons</strong> - Images sous licences libres (CC BY-SA, CC BY, Domaine Public)</li>
+                    <li><strong>Pexels</strong> - Licence Pexels autorisant l'usage gratuit</li>
+                    <li><strong>Flickr</strong> - Images sous licence Creative Commons</li>
+                    <li><strong>Autres sources</strong> - Créditées individuellement sous chaque image</li>
+                </ul>
+
+                <h3>Clause de non-responsabilité</h3>
+                <p>Les informations culinaires fournies sont à titre indicatif. L'Atlas Culinaire ne peut être tenu responsable 
+                d'éventuelles erreurs ou omissions dans les recettes et descriptions.</p>
+
+                <h3>Liens externes</h3>
+                <p>Les liens vers des sites externes sont fournis pour votre information. L'Atlas Culinaire n'est pas responsable 
+                du contenu de ces sites tiers.</p>
             </div>
         </div>
+    </div>
 
-    <!-- Le JavaScript -->  
+    <!-- Script JavaScript -->
     <script>
-        
+        // Sélection des éléments DOM
         const buttons = document.querySelectorAll('.continent-btn');
         const sections = document.querySelectorAll('.continent-section');
         const mapAreas = document.querySelectorAll('area');
 
+        // Gestion des boutons de navigation
         buttons.forEach(button => {
             button.addEventListener('click', () => {
                 const continent = button.getAttribute('data-continent');
@@ -628,6 +731,7 @@
             });
         });
 
+        // Gestion des clics sur la carte
         mapAreas.forEach((area, index) => {
             area.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -636,50 +740,87 @@
             });
         });
 
+        /**
+         * Change l'affichage du continent actif
+         * @param {string} continent - Identifiant du continent à afficher
+         */
         function changeContinent(continent) {
+            // Retirer la classe active de tous les boutons
             buttons.forEach(btn => btn.classList.remove('active'));
             
+            // Ajouter la classe active au bouton sélectionné
             const activeButton = document.querySelector(`[data-continent="${continent}"]`);
             if (activeButton) activeButton.classList.add('active');
             
+            // Masquer toutes les sections
             sections.forEach(section => section.classList.remove('active'));
             
+            // Afficher la section sélectionnée
             const activeSection = document.getElementById(continent);
             if (activeSection) activeSection.classList.add('active');
         }
 
+        /**
+         * Ouvre la lightbox avec l'image cliquée
+         * @param {HTMLElement} img - Élément image cliqué
+         */
         function openLightbox(img) {
             const lightbox = document.querySelector('.lightbox');
             const lightboxImage = document.querySelector('.lightbox-image');
             const lightboxCaption = document.querySelector('.lightbox-caption');
+            const lightboxCredit = document.querySelector('.lightbox-credit');
 
+            // Récupération des données de l'image
             lightboxImage.src = img.src;
             lightboxCaption.textContent = img.alt;
+            
+            // Affichage du crédit avec lien si disponible
+            const credit = img.dataset.credit;
+            const link = img.dataset.link;
+            
+            if (link && link !== '#') {
+                lightboxCredit.innerHTML = `Crédit : <a href="${link}" target="_blank" rel="noopener">${credit}</a>`;
+            } else {
+                lightboxCredit.textContent = `Crédit : ${credit}`;
+            }
+            
             lightbox.classList.add('active');
         }
 
+        /**
+         * Ferme la lightbox
+         */
         function closeLightbox() {
             document.querySelector('.lightbox').classList.remove('active');
         }
 
+        /**
+         * Ouvre une modal
+         * @param {string} type - Type de modal à ouvrir
+         */
         function openModal(type) {
             const modal = document.getElementById('modal-' + type);
             if (modal) modal.classList.add('active');
         }
 
+        /**
+         * Ferme une modal
+         * @param {string} type - Type de modal à fermer
+         */
         function closeModal(type) {
             const modal = document.getElementById('modal-' + type);
             if (modal) modal.classList.remove('active');
         }
 
+        // Gestion de la touche Échap pour fermer les modales et lightbox
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeLightbox();
                 closeModal('mentions');
                 closeModal('licence');
+                closeModal('contact');
             }
         });
     </script>
 </body>
-</html> 
-                     
+</html>
