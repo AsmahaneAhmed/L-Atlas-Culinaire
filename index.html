@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    
+    <!-- Métadonnées de base --> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>L'Atlas Culinaire</title>
 </head>
 <body>
+    
+     <!-- En-tête principal du site -->
     <header>
         <h1>🌍 L'Atlas Culinaire 🌍</h1>
         <p class="subtitle">Explorez les saveurs du monde</p>
     </header>
-
+    
+ <!-- Navigation du site par continents -->
     <nav>
         <button class="continent-btn active" data-continent="accueil">Accueil</button>
         <button class="continent-btn" data-continent="europe">Europe</button>
@@ -28,7 +33,8 @@
              alt="carte du monde" 
              usemap="#image-map">
         <p>© Photo par Monstera Production via Pexels</p>
-        
+
+        <!-- les zones cliquables de la carte -->
         <map name="image-map">
             <area alt="Recettes d'Amérique" 
                   title="Cliquez pour voir les Amériques" 
@@ -62,6 +68,7 @@
         </map>
     </div>
 
+    <!-- La section Accueil -->
     <section class="continent-section active" id="accueil">
         <h2 class="continent-title">Accueil</h2>
         <div class="categories">
@@ -76,11 +83,13 @@
         </div>
     </section>
 
+    !-- La section Europe -->
     <div class="container">
         <section class="continent-section" id="europe">
             <h2 class="continent-title">Europe</h2>
             <div class="categories">
                 <div class="category-card">
+                    <!-- Les plats européens -->
                     <h3 class="category-title"><span class="category-icon">🍽️</span> Plats</h3>
                     <ul class="item-list">
                         <li>
@@ -113,7 +122,7 @@
                         </li>
                     </ul>
                 </div>
-                
+                <!-- Les desserts européens -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
                     <ul class="item-list">
@@ -155,6 +164,7 @@
                         
                     </ul>
                 </div>
+                <!-- Les boissons européennes -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
                     <ul class="item-list">
@@ -197,10 +207,12 @@
             </div>
         </section>
 
+        !-- La section Asie -->
         <section class="continent-section" id="asie">
             <h2 class="continent-title">Asie</h2>
             <div class="categories">
                 <div class="category-card">
+                    !-- Les plats asiatiques -->
                     <h3 class="category-title"><span class="category-icon">🍽️</span> Plats</h3>
                     <ul class="item-list">
                         <li>
@@ -233,6 +245,7 @@
                         </li>
                     </ul>
                 </div>
+                <!-- Les desserts asiatiques -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
                     <ul class="item-list">
@@ -271,7 +284,7 @@
                         
                     </ul>
                 </div>
-                
+                <!-- Les boissons asiatiques -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
                     <ul class="item-list">
@@ -283,11 +296,12 @@
                 </div>
             </div>
         </section>
-
+          <!-- La section Afrique -->
         <section class="continent-section" id="afrique">
             <h2 class="continent-title">Afrique</h2>
             <div class="categories">
                 <div class="category-card">
+                      <!-- Les plats africains -->
                     <h3 class="category-title"><span class="category-icon">🍽️</span> Plats</h3>
                     <ul class="item-list">
                         <li>Tajine (Maroc)</li>
@@ -296,6 +310,7 @@
                         <li>Bobotie (Afrique du Sud)</li>
                     </ul>
                 </div>
+                  <!-- Les desserts africains -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
                     <ul class="item-list">
@@ -305,6 +320,7 @@
                         <li>Koeksister (Afrique du Sud)</li>
                     </ul>
                 </div>
+                  <!-- Les boissons africianes -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
                     <ul class="item-list">
@@ -316,10 +332,11 @@
                 </div>
             </div>
         </section>
-
+<!-- La section Amériques -->
         <section class="continent-section" id="ameriques">
             <h2 class="continent-title">Amériques</h2>
             <div class="categories">
+                <!-- Les plats américains -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🍽️</span> Plats</h3>
                     <ul class="item-list">
@@ -353,6 +370,7 @@
                         </li>
                     </ul>
                 </div>
+                <!-- Les desserts américiains -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
                     <ul class="item-list">
@@ -386,6 +404,7 @@
                         </li>
                     </ul>
                 </div>
+                <!-- Les boissons américaines -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
                     <ul class="item-list">
@@ -403,10 +422,12 @@
                 </div>
             </div>
         </section>
-
+        
+ <!-- La section Océanie -->
         <section class="continent-section" id="oceanie">
             <h2 class="continent-title">Océanie</h2>
             <div class="categories">
+                 <!-- Les plats océaniens -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🍽️</span> Plats</h3>
                     <ul class="item-list">
@@ -440,6 +461,7 @@
                         </li>
                     </ul>
                 </div>
+                 <!-- Les desserts océaniens -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🧁</span> Desserts</h3>
                     <ul class="item-list">
@@ -449,6 +471,7 @@
                         <li>Tim Tam (Australie)</li>
                     </ul>
                 </div>
+                 <!-- Les boissons océaniennes Océanie -->
                 <div class="category-card">
                     <h3 class="category-title"><span class="category-icon">🍸</span> Boissons</h3>
                     <ul class="item-list">
@@ -462,7 +485,64 @@
         </section>
     </div>
 
-    <!-- Lightbox -->
+       <!-- Section Glossaire -->
+        <section class="continent-section" id="glossaire">
+            <h2 class="continent-title">Glossaire Culinaire</h2>
+            <div class="glossary-container">
+                <div class="glossary-card">
+                    <h3 class="glossary-term">Aligot</h3>
+                    <p class="glossary-definition">Spécialité auvergnate composée de purée de pommes de terre mélangée à de la tome fraîche, créant une texture filante caractéristique.</p>
+                </div>
+                
+                <div class="glossary-card">
+                    <h3 class="glossary-term">Biryani</h3>
+                    <p class="glossary-definition">Plat de riz parfumé indien cuit avec des épices, de la viande ou des légumes, souvent accompagné de yaourt raïta.</p>
+                </div>
+                
+                <div class="glossary-card">
+                    <h3 class="glossary-term">Bo Bun</h3>
+                    <p class="glossary-definition">Salade vietnamienne composée de vermicelles de riz, herbes fraîches, légumes croquants et viande grillée, servie avec sauce nuoc mam.</p>
+                </div>
+                
+                <div class="glossary-card">
+                    <h3 class="glossary-term">Feijoada</h3>
+                    <p class="glossary-definition">Ragoût brésilien traditionnel à base de haricots noirs, diverses viandes de porc et bœuf, servi avec du riz, des oranges et du farofa.</p>
+                </div>
+                
+                <div class="glossary-card">
+                    <h3 class="glossary-term">Hangi</h3>
+                    <p class="glossary-definition">Méthode de cuisson maorie traditionnelle où les aliments sont cuits dans un four creusé dans le sol avec des pierres chaudes.</p>
+                </div>
+                
+                <div class="glossary-card">
+                    <h3 class="glossary-term">Knafeh</h3>
+                    <p class="glossary-definition">Pâtisserie moyen-orientale composée de cheveux d'ange (kadaïf), fromage fondu et sirop sucré parfumé à l'eau de rose.</p>
+                </div>
+                
+                <div class="glossary-card">
+                    <h3 class="glossary-term">Mansaf</h3>
+                    <p class="glossary-definition">Plat national jordanien composé d'agneau cuit dans une sauce au yaourt fermenté (jameed), servi sur un lit de riz.</p>
+                </div>
+                
+                <div class="glossary-card">
+                    <h3 class="glossary-term">Pavlova</h3>
+                    <p class="glossary-definition">Dessert à base de meringue croustillante à l'extérieur et moelleuse à l'intérieur, garnie de crème fouettée et fruits frais.</p>
+                </div>
+                
+                <div class="glossary-card">
+                    <h3 class="glossary-term">Polvo à Lagareiro</h3>
+                    <p class="glossary-definition">Poulpe portugais rôti au four avec pommes de terre, généreusement arrosé d'huile d'olive de qualité.</p>
+                </div>
+                
+                <div class="glossary-card">
+                    <h3 class="glossary-term">Suspiro limeño</h3>
+                    <p class="glossary-definition">Dessert péruvien composé de manjar blanco (confiture de lait) surmonté d'une meringue légère au porto.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Lightbox pour l'affichage agrandi des images -->
     <div class="lightbox" onclick="closeLightbox()">
         <div class="lightbox-content" onclick="event.stopPropagation()">
             <button class="lightbox-close" onclick="closeLightbox()">×</button>
@@ -472,15 +552,65 @@
     </div>
 
     
-
+  <!-- Le pied de page -->
     <footer>
         <p>&copy; 2025 L'Atlas Culinaire - Explorez les saveurs du monde</p>
         <div class="footer-links">
-            <a href="mailto:contact@atlasculinaire.com">Contact</a>
+            <a href="#" onclick="openModal('contact')">Contact</a>
+            <span class="footer-separator">|</span>
+            <a href="#" onclick="openModal('mentions')">Mentions légales</a>
+                <span class="footer-separator">|</span>
+                <a href="#" onclick="openModal('licence')">Licence</a>
         </div>
     </footer>
 
+        <!-- Les contacts -->
+    <div class="modal" id="modal-contact">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('contact')">×</button>
+            <h2>Contactez-nous</h2>
+            <div class="contact-info">
+                <p><strong>Email :</strong> <a href="mailto:contact@atlasculinaire.com">contact@atlasculinaire.com</a></p>
+                <p><strong>Adresse :</strong> 123 Rue de la Gastronomie, 75001 Paris, France</p>
+                
+<!-- Les Mentions légales -->
+    <div class="modal" id="modal-mentions">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('mentions')">×</button>
+            <h2>Mentions légales</h2>
+            <div class="legal-content">
+                <h3>Éditeur du site</h3>
+
+
+
+
+
+
+
+
+                  <h3>Propriété intellectuelle</h3>
+                <p>L'ensemble du contenu de ce site (textes, images, vidéos) est protégé par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
+
+                <h3>Crédits photographiques</h3>
+                <p>Les photographies présentes sur ce site proviennent de diverses sources libres de droits ou sous licence Creative Commons. Les crédits sont mentionnés sous chaque image.</p>
+
+                <h3>Données personnelles</h3>
+                <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles. Pour exercer ce droit, contactez-nous à : <a href="mailto:rgpd@atlasculinaire.com">rgpd@atlasculinaire.com</a></p>
+
+                <h3>Cookies</h3>
+                <p>Ce site n'utilise pas de cookies de traçage. Seuls des cookies techniques nécessaires au fonctionnement du site peuvent être utilisés.</p>
+
+<!-- Le modal Licence -->
+    <div class="modal" id="modal-licence">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('licence')">×</button>
+            <h2>Licence et Conditions d'utilisation</h2>
+            <div class="legal-content">
+                <h3>Licence Creative Commons</h3>
+
+    <!-- Le JavaScript -->  
     <script>
+        
         const buttons = document.querySelectorAll('.continent-btn');
         const sections = document.querySelectorAll('.continent-section');
         const mapAreas = document.querySelectorAll('area');
