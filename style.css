@@ -1,4 +1,6 @@
-
+/* ===========================
+   RÉINITIALISATION ET BASE
+   =========================== */
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +14,9 @@ body {
     line-height: 1.6;
 }
 
+/* ===========================
+   EN-TÊTE
+   =========================== */
 header {
     background: rgba(255, 255, 255, 0.05);
     padding: 2rem 0;
@@ -34,6 +39,9 @@ h1 {
     margin-top: 0.5rem;
 }
 
+/* ===========================
+   NAVIGATION
+   =========================== */
 nav {
     display: flex;
     justify-content: center;
@@ -68,6 +76,9 @@ nav {
     box-shadow: 0 6px 15px rgba(212, 175, 55, 0.5);
 }
 
+/* ===========================
+   CARTE DU MONDE
+   =========================== */
 .map-container {
     text-align: center;
     margin: 1rem auto;
@@ -97,12 +108,37 @@ nav {
     box-shadow: 0 12px 35px rgba(212, 175, 55, 0.6);
 }
 
+/* Crédit image de la carte */
+.image-credit {
+    color: #c9a961;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.image-credit a {
+    color: #d4af37;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.image-credit a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* ===========================
+   CONTENEUR PRINCIPAL
+   =========================== */
 .container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 1.5rem 2rem;
 }
 
+/* ===========================
+   SECTIONS DE CONTINENTS
+   =========================== */
 .continent-section {
     display: none;
     animation: fadeIn 0.5s ease;
@@ -112,6 +148,7 @@ nav {
     display: block;
 }
 
+/* Animation d'apparition */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -132,6 +169,38 @@ nav {
     padding-bottom: 1rem;
 }
 
+/* ===========================
+   SECTION ACCUEIL
+   =========================== */
+.welcome-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    margin-bottom: 1.5rem;
+}
+
+/* Citations avec guillemets français */
+.quote, blockquote {
+    background: rgba(212, 175, 55, 0.1);
+    border-left: 4px solid #d4af37;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #e5c158;
+    border-radius: 5px;
+}
+
+.quote::before, blockquote::before {
+    content: '« ';
+}
+
+.quote::after, blockquote::after {
+    content: ' »';
+}
+
+/* ===========================
+   CARTES DE CATÉGORIES
+   =========================== */
 .categories {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -167,6 +236,9 @@ nav {
     font-size: 2rem;
 }
 
+/* ===========================
+   LISTES D'ITEMS
+   =========================== */
 .item-list {
     list-style: none;
 }
@@ -195,6 +267,7 @@ nav {
     flex: 1;
 }
 
+/* Images miniatures dans les listes */
 .item-image {
     width: 60px;
     height: 60px;
@@ -210,6 +283,47 @@ nav {
     border-color: #d4af37;
 }
 
+/* ===========================
+   GLOSSAIRE
+   =========================== */
+.glossary-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.glossary-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 1.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
+}
+
+.glossary-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+    border-color: rgba(212, 175, 55, 0.5);
+}
+
+.glossary-term {
+    color: #d4af37;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.glossary-definition {
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* ===========================
+   LIGHTBOX (Affichage agrandi)
+   =========================== */
 .lightbox {
     display: none;
     position: fixed;
@@ -232,6 +346,7 @@ nav {
     max-width: 90%;
     max-height: 90%;
     position: relative;
+    text-align: center;
 }
 
 .lightbox-image {
@@ -267,16 +382,209 @@ nav {
     color: #d4af37;
     margin-top: 1rem;
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
+/* Crédit photo dans la lightbox */
+.lightbox-credit {
+    text-align: center;
+    color: #c9a961;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+.lightbox-credit a {
+    color: #d4af37;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.lightbox-credit a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* ===========================
+   MODALES (Contact, Mentions, Licence)
+   =========================== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1001;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+    overflow-y: auto;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    padding: 2.5rem;
+    max-width: 700px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 50px rgba(212, 175, 55, 0.5);
+}
+
+.modal-content h2 {
+    color: #d4af37;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+    padding-bottom: 1rem;
+}
+
+.modal-content h3 {
+    color: #e5c158;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #d4af37;
+    color: #1a1a2e;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: #ffd700;
+    transform: rotate(90deg);
+}
+
+/* Contenu des modales */
+.contact-info, .legal-content {
+    color: #e0e0e0;
+    line-height: 1.8;
+}
+
+.contact-info p, .legal-content p {
+    margin-bottom: 1rem;
+}
+
+.contact-info strong, .legal-content strong {
+    color: #d4af37;
+}
+
+.contact-info a, .legal-content a {
+    color: #e5c158;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover, .legal-content a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* Liens sociaux */
+.social-links {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.social-links h3 {
+    color: #d4af37;
+    margin-bottom: 0.8rem;
+}
+
+/* Listes dans les modales */
+.legal-content ul {
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.legal-content li {
+    margin-bottom: 0.5rem;
+    color: #e0e0e0;
+}
+
+/* Citation dans la licence */
+.license-quote {
+    background: rgba(212, 175, 55, 0.15);
+    border-left: 4px solid #d4af37;
+    padding: 1.2rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #e5c158;
+    border-radius: 5px;
+}
+
+/* ===========================
+   PIED DE PAGE
+   =========================== */
 footer {
     text-align: center;
     padding: 2rem;
     background: rgba(255, 255, 255, 0.05);
     margin-top: 4rem;
     color: #c9a961;
+    border-top: 2px solid rgba(212, 175, 55, 0.3);
 }
 
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-copyright {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #d4af37;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+.footer-separator {
+    color: #c9a961;
+}
+
+/* ===========================
+   RESPONSIVE - MOBILE
+   =========================== */
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
@@ -289,6 +597,28 @@ footer {
     .continent-btn {
         padding: 0.6rem 1.5rem;
         font-size: 0.9rem;
+    }
+
+    .modal-content {
+        padding: 1.5rem;
+        width: 95%;
+    }
+
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .glossary-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .footer-separator {
+        display: none;
     }
 }
 
