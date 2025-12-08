@@ -409,7 +409,7 @@ nav {
    MODALES (Contact, Mentions, Licence)
    =========================== */
 .modal {
-    display: none;
+    display: none; /* Caché par défaut */
     position: fixed;
     top: 0;
     left: 0;
@@ -421,10 +421,11 @@ nav {
     align-items: center;
     animation: fadeIn 0.3s ease;
     overflow-y: auto;
+    padding: 20px; /* Pour éviter que le contenu touche les bords sur mobile */
 }
 
 .modal.active {
-    display: flex;
+    display: flex; /* Affiché quand la classe active est ajoutée */
 }
 
 .modal-content {
@@ -511,6 +512,28 @@ nav {
 .social-links h3 {
     color: #d4af37;
     margin-bottom: 0.8rem;
+}
+
+/* Informations de licence avec icônes */
+.license-info {
+    background: rgba(212, 175, 55, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    margin-bottom: 2rem;
+}
+
+.license-info p {
+    margin-bottom: 0;
+}
+
+.license-info a {
+    color: #ffd700;
+    font-weight: 600;
+}
+
+.license-info a:hover {
+    color: #ffed4e;
 }
 
 /* Listes dans les modales */
@@ -621,4 +644,3 @@ footer {
         display: none;
     }
 }
-
