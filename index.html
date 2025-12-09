@@ -332,10 +332,21 @@
                     <h3 class="category-title"><span class="category-icon">🍽️</span> Plats</h3>
                     <ul class="item-list">
 
-                        <li>
-                            <span class="item-text">Tajine (Maroc)</span>
-                            <button class="video-btn" onclick="openVideoModal('tajine')">🎬 Voir la vidéo</button>
-                        </li>
+                       <div class="modal" id="modal-video-tajine">
+    <div class="modal-content video-modal-content">
+        <button class="modal-close" onclick="closeVideoModal('tajine')">×</button>
+        <h2>Vidéo : Tajine (Maroc)</h2>
+
+        <div class="video-container">
+            <iframe 
+                id="video-tajine" 
+                src="https://www.youtube.com/embed/votre_vrai_id_youtube" 
+                title="Tajine (Maroc)" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        </div>
+</div>
                         
                         <li>
                             <span class="item-text">Jollof Rice (Afrique de l'Ouest)</span>
@@ -766,7 +777,7 @@
     </div>
 
     <!-- Script JavaScript -->
-    <script>
+   <script>
         // Sélection des éléments DOM
         const buttons = document.querySelectorAll('.continent-btn');
         const sections = document.querySelectorAll('.continent-section');
@@ -860,7 +871,8 @@
             const modal = document.getElementById('modal-' + type);
             if (modal) modal.classList.remove('active');
         }
-      /**
+
+        /**
          * Ouvre la modal vidéo
          * @param {string} videoId - Identifiant de la vidéo
          */
@@ -881,10 +893,12 @@
                 const iframe = document.getElementById('video-' + videoId);
                 if (iframe) {
                     const src = iframe.src;
-                    iframe.src = '';
-                    iframe.src = src;
+                    iframe.src = ''; // Arrête la lecture
+                    iframe.src = src; // Réinitialise l'iframe
                 }
-    
+            } // <-- Fermeture du bloc if (modal)
+        } // <-- Fermeture de la fonction closeVideoModal
+
     </script>
 </body>
 </html>
