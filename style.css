@@ -582,17 +582,6 @@ nav {
     text-decoration: underline;
 }
 
-/* Liens sociaux */
-.social-links {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(212, 175, 55, 0.3);
-}
-
-.social-links h3 {
-    color: #d4af37;
-    margin-bottom: 0.8rem;
-}
 
 /* Informations de licence avec icônes */
 .license-info {
@@ -721,6 +710,58 @@ footer {
 
     .footer-separator {
         display: none;
+    }
+.biblio-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(212, 175, 55, 0.05);
+    border-radius: 8px;
+}
+
+.biblio-section p {
+    margin-bottom: 1.2rem;
+    padding-left: 1rem;
+    border-left: 3px solid rgba(212, 175, 55, 0.3);
+    line-height: 1.8;
+}
+
+.biblio-section p:last-child {
+    margin-bottom: 0;
+}
+
+.biblio-section strong {
+    color: #d4af37;
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 1.05rem;
+}
+
+.biblio-section em {
+    color: #c9a961;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 0.3rem;
+}
+
+.biblio-section a {
+    word-break: break-all;
+}
+
+/* Amélioration de la modal pour la bibliographie */
+#modal-bibliographie .modal-content {
+    max-width: 800px;
+    max-height: 90vh;
+}
+
+/* Responsive pour la bibliographie */
+@media (max-width: 768px) {
+    .biblio-section {
+        padding: 0.8rem;
+    }
+    
+    .biblio-section p {
+        font-size: 0.9rem;
+        padding-left: 0.5rem;
     }
 }
 
