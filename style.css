@@ -672,45 +672,23 @@ footer {
 .footer-separator {
     color: #c9a961;
 }
-
 /* ===========================
-   RESPONSIVE - MOBILE
+   RESPONSIVE MOBILE
    =========================== */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
+    h1 { font-size: 2rem; }
+    .categories { grid-template-columns: 1fr; }
+    .continent-btn { padding: 0.6rem 1.5rem; font-size: 0.9rem; }
+    .modal-content { padding: 1.5rem; width: 95%; }
+    .modal-content h2 { font-size: 1.5rem; }
+    .glossary-container { grid-template-columns: 1fr; }
+    .footer-links { flex-direction: column; gap: 0.8rem; }
+    .footer-separator { display: none; }
+}
 
-    .categories {
-        grid-template-columns: 1fr;
-    }
-
-    .continent-btn {
-        padding: 0.6rem 1.5rem;
-        font-size: 0.9rem;
-    }
-
-    .modal-content {
-        padding: 1.5rem;
-        width: 95%;
-    }
-
-    .modal-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .glossary-container {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-
-    .footer-separator {
-        display: none;
-    }
+/* ===========================
+   BIBLIOGRAPHIE
+   =========================== */
 .biblio-section {
     margin-bottom: 2rem;
     padding: 1rem;
@@ -725,10 +703,6 @@ footer {
     line-height: 1.8;
 }
 
-.biblio-section p:last-child {
-    margin-bottom: 0;
-}
-
 .biblio-section strong {
     color: #d4af37;
     display: block;
@@ -736,32 +710,16 @@ footer {
     font-size: 1.05rem;
 }
 
-.biblio-section em {
-    color: #c9a961;
-    font-size: 0.9rem;
-    display: block;
-    margin-top: 0.3rem;
-}
-
-.biblio-section a {
-    word-break: break-all;
-}
-
-/* Amélioration de la modal pour la bibliographie */
 #modal-bibliographie .modal-content {
     max-width: 800px;
     max-height: 90vh;
 }
 
-/* Responsive pour la bibliographie */
-@media (max-width: 768px) {
-    .biblio-section {
-        padding: 0.8rem;
-    }
-    
-    .biblio-section p {
-        font-size: 0.9rem;
-        padding-left: 0.5rem;
-    }
+/* ===========================
+   GLOSSAIRE CLIQUABLE
+   =========================== */
+.glossary-clickable {
+    cursor: pointer;
+    position: relative;
 }
-}
+
